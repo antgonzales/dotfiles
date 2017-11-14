@@ -12,66 +12,9 @@ fi
 # Update homebrew recipes
 brew update
 
-# Install GNU core utilities (those that come with OS X are outdated)
-brew tap homebrew/dupes
-brew install coreutils
-brew install gnu-sed --with-default-names
-brew install gnu-tar --with-default-names
-brew install gnu-indent --with-default-names
-brew install gnu-which --with-default-names
-brew install gnu-grep --with-default-names
+echo "Installing homebrew bundle..."
 
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-
-# Install Bash 4
-brew install bash
-
-PACKAGES=(
-    ack
-    git
-    hub
-    jq
-    libjpeg
-    rename
-    the_silver_searcher
-    tmux
-    tree
-    vim
-    wget
-)
-
-echo "Installing packages..."
-brew install ${PACKAGES[@]}
-
-echo "Cleaning up..."
-brew cleanup
-
-echo "Installing cask..."
-brew install caskroom/cask/brew-cask
-
-CASKS=(
-    dropbox
-    firefox
-    google-chrome
-    gpgtools
-    iterm2
-    macvim
-    slack
-    spectacle
-    spotify
-    vlc
-)
-
-echo "Installing cask apps..."
-brew cask install ${CASKS[@]}
-
-echo "Installing fonts..."
-brew tap caskroom/fonts
-FONTS=(
-    font-hack
-)
-brew cask install ${FONTS[@]}
+brew bundle
 
 echo "Installing NVM..."
 
