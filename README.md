@@ -1,9 +1,14 @@
-# ~/.config
+# Dotfiles
 
-Personal configuration files for Neovim text editing.
+Personal configuration files.
 
-## Installation
+### Neovim
 
 ```
-cp -R .config ~/.config
+cp ./nvim/init.vim ~/.config/nvim/init.vim
+```
+
+### Prezto
+```
+cp ./.zpreztorc ~/.zpreztorc
 ```

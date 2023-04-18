@@ -9,9 +9,17 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source ~/.config/nvim/init.vim
 \| endif
 
+
 call plug#begin('~/.config/nvim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'editorconfig/editorconfig-vim'
+Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'MattesGroeger/vim-bookmarks'
@@ -35,6 +43,19 @@ set incsearch
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
+let b:ale_fixers = ['prettier', 'eslint']
+let g:ale_fix_on_save = 1
+let g:ale_completion_autoimport = 1
+
+let g:ale_sign_error = "🐛"
+let g:ale_sign_warning = "⚠️"
+let g:ale_sign_info = "ℹ"
+
+let g:ale_virtualtext_cursor = 1
+let g:ale_virtualtext_prefix = "🔥 "
+
+let g:deoplete#enable_at_startup = 1
+
 " Turn off the banner in Netrw Directory Listing
 let g:netrw_banner = 0
 
@@ -42,39 +63,9 @@ let g:netrw_banner = 0
 let g:netrw_list_hide = '^\./$'
 let g:netrw_hide = 1
 
-" Tree style file explorer in Netrw
-let g:netrw_liststyle=3
-
-" Install Coc extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-prettier', 'coc-eslint']
-
-" Automatically format files on save
-let g:coc_user_config = {"coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "json", "javascript", "javascriptreact", "css", "markdown" ]}
-
-" Use <cr> to select the first completion
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-
-" Turn on syntax highlighting using Neovim Treesitter and turn off
-" default regex based syntax highlighting
-" You may need to install additional syntax with :TSInstall <LANGUAGE>
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
-}
-EOF
-
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 
-" coc.vim Configurations
-" https://github.com/neoclide/coc.nvim#example-vim-configuration
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
@@ -95,3 +86,6 @@ set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+
+set smarttab
+set cindent
