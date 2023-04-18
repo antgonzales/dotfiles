@@ -41,6 +41,7 @@ brew install git-delta
 
 # Install other useful binaries
 brew install fzf
+brew install bat
 
 # json stuff
 brew install jq gron

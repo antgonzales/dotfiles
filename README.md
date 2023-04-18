@@ -15,5 +15,3 @@ Run `:PlugInstall` in Neovim.
 cp ./.zpreztorc ~/.zpreztorc
 cp ./.zshrc ~/.zshrc
 ```
-
-
