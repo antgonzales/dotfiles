@@ -1,6 +1,12 @@
 # Dotfiles
 
-Personal configuration files.
+My personal configuration files. Inspired by 
+
+* [mathias](https://github.com/mathiasbynens/dotfiles/)
+* [alrra](https://github.com/alrra/dotfiles/)
+* [paulmillr](https://github.com/paulmillr/dotfiles)
+* [gf3](https://github.com/gf3/dotfiles)
+* [paulirish](https://github.com/paulirish/dotfiles)
 
 ### Neovim
 
