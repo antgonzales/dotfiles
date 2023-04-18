@@ -27,6 +27,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'junegunn/seoul256.vim'
 call plug#end()
 
+let g:seoul256_background = 239
 colo seoul256
 
 " Turn off temporary swap and backup files
@@ -36,7 +37,7 @@ set number
 " Use the clipboards of Vim and Window
 set clipboard+=unnamedplus
 " Visual selection automatically copied to the clipboard
-set go+=a 
+set go+=a
 " Moves the cursor to found characters as you search
 set incsearch
 
