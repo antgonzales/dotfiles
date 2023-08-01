@@ -19,5 +19,4 @@ Run `:PlugInstall` in Neovim.
 ### Prezto
 ```
 cp ./.zpreztorc ~/.zpreztorc
-cp ./.zshrc ~/.zshrc
 ```
