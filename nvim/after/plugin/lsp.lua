@@ -8,7 +8,7 @@ end)
 
 -- When you don't have mason.nvim installed
 -- You'll need to list the servers installed in your system
-lsp.ensure_installed({'tsserver', 'eslint', 'lua_ls'})
+lsp.ensure_installed({'tsserver', 'eslint', 'lua_ls', 'html'})
 
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
