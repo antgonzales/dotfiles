@@ -18,13 +18,21 @@ brew bundle install
 cp ./.zpreztorc ~/.zpreztorc
 ```
 
-05. Copy Neovim config to `.config` directory
+05. Copy init into `.zshrc`
+```console
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+```
+
+06. Copy Neovim config to `.config` directory
 
 ```console
 cp -r ./nvim ~/.config/nvim
 ```
 
-06. Update Neovim dependencies
+07. Update Neovim dependencies
 
 ```sh
 :PackerSync

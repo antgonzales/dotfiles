@@ -105,7 +105,7 @@
   "Prompt Before Closing 2" : false,
   "BM Growl" : true,
   "Command" : "",
-  "Description" : "Default",
+  "Description" : "Custom profile using Github Dark color scheme.",
   "Mouse Reporting" : true,
   "Screen" : -1,
   "Selection Color" : {
@@ -341,7 +341,7 @@
     "Green Component" : 0.83137255907058716
   },
   "ASCII Ligatures" : true,
-  "Name" : "Default",
+  "Name" : "Github Dark",
   "Cursor Text Color" : {
     "Red Component" : 0.67843139171600342,
     "Color Space" : "sRGB",
