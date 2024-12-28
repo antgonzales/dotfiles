@@ -5,12 +5,9 @@ return {
       vtsls = function(_, opts)
         -- Inject the HNVM_NODE variable so vtsls picks the right Node version.
         opts.cmd_env = {
-          HVNM_QUIET = false, -- Ensure that we log hnvm information
+          HVNM_QUIET = false, -- Ensure we log hnvm info in cases of failure.
           HNVM_NODE = "20.16.0", -- Update this version to match your hnvm setup.
         }
-
-        -- Alternatively, override the cmd to use hnvm exec:
-        -- opts.cmd = { "hnvm", "exec", "vtsls", "--stdio" }
       end,
     },
   },
