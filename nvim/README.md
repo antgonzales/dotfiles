@@ -1,4 +1,11 @@
-# 💤 LazyVim
+# 💤 antgonzales's LazyVim
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+## Quickstart
+
+1. Pull the repository locally
+2. Symlink the `nvim` directory to `~/.config/nvim`
+
+```bash
+gh repo clone antgonzales/dotfiles
+ln -s ./dotfiles/nvim ~/.config/nvim
+```
