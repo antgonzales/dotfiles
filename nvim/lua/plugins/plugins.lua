@@ -1,11 +1,11 @@
 return {
   -- Load Rose Pine colorscheme
   { "rose-pine/neovim" },
-  -- Set colorscheme
+  -- Set colorscheme (will be managed by auto-dark-mode)
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine-moon",
+      -- colorscheme managed by auto-dark-mode plugin
     },
   },
   {
