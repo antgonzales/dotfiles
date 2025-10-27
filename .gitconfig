@@ -1,9 +1,0 @@
-[user]
-	email = 3740655+antgonzales@users.noreply.github.com
-	name = Anthony Gonzales
-[init]
-	defaultBranch = main
-[core]
-	editor = nvim
-[color]
-	ui = auto
