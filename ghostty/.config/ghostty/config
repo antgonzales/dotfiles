@@ -1,3 +1,7 @@
 font-family = Hack Nerd Font Mono
 font-size = 16
-theme = dark:Rose Pine Moon,light:Rose Pine Dawn
+theme = Rose Pine Moon
+background-opacity = 0.7
+background-blur-radius = 20
+window-decoration = true
+mouse-hide-while-typing = true
