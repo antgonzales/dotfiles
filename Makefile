@@ -2,15 +2,15 @@
 
 # Stow all dotfiles
 stow:
-	stow -t ~ bat editorconfig ghostty git nvim tmux zsh
+	stow -t ~ bat editorconfig ghostty git nvim opencode tmux zsh
 
 # Unstow all dotfiles
 unstow:
-	stow -t ~ -D bat editorconfig ghostty git nvim tmux zsh
+	stow -t ~ -D bat editorconfig ghostty git nvim opencode tmux zsh
 
 # Restow (unstow then stow) all dotfiles
 restow:
-	stow -t ~ -R bat editorconfig ghostty git nvim tmux zsh
+	stow -t ~ -R bat editorconfig ghostty git nvim opencode tmux zsh
 
 # Clean broken symlinks in home directory
 clean:
@@ -18,4 +18,4 @@ clean:
 
 # Show what would be stowed
 dry-run:
-	stow -t ~ -n bat editorconfig ghostty git nvim tmux zsh
+	stow -t ~ -n bat editorconfig ghostty git nvim opencode tmux zsh

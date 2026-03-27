@@ -1,0 +1,46 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoshare": false,
+  "autoupdate": true,
+  "permission": {
+    "glob": "allow",
+    "grep": "allow",
+    "read": "allow",
+    "bash": {
+      "*": "ask",
+      "ls": "allow",
+      "ls *": "allow",
+      "cat *": "allow",
+      "echo *": "allow",
+      "grep *": "allow",
+      "rg *": "allow",
+      "find *": "allow",
+
+      "git status": "allow",
+      "git status *": "allow",
+      "git diff": "allow",
+      "git diff *": "allow",
+      "git log": "allow",
+      "git log *": "allow",
+      "git show *": "allow",
+      "git branch": "allow",
+      "git branch *": "allow",
+      "git stash list": "allow",
+      "git stash list *": "allow",
+      "git remote *": "allow",
+      "git blame *": "allow",
+      "git shortlog *": "allow",
+
+      "gh pr list *": "allow",
+      "gh pr view *": "allow",
+      "gh pr checks *": "allow",
+      "gh pr diff *": "allow",
+      "gh issue list *": "allow",
+      "gh issue view *": "allow",
+      "gh run list *": "allow",
+      "gh run view *": "allow",
+      "gh api *": "allow",
+      "gh repo view *": "allow"
+    }
+  }
+}

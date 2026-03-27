@@ -1,3 +1,9 @@
 # Override Prezto editor defaults to use nvim
 export EDITOR="/opt/homebrew/bin/nvim"
 export VISUAL="/opt/homebrew/bin/nvim"
+
+# Company-specific environment variables
+export CLAUDE_CODE_USE_VERTEX=1
+export CLOUD_ML_REGION=global
+export ANTHROPIC_VERTEX_PROJECT_ID='vertex-ai-test-project-476417'
+export GOOGLE_CLOUD_PROJECT='vertex-ai-test-project-476417'

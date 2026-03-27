@@ -17,4 +17,6 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
+# Local zsh config (not tracked - contains machine/company-specific settings)
+**/.zshrc.local
 

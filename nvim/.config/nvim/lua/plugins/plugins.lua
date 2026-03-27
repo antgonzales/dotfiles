@@ -56,6 +56,15 @@ return {
     optional = true,
     opts = function()
       require("copilot.api").status = require("copilot.status")
+      return {
+        filetypes = {
+          markdown = false,
+          txt = false,
+          yaml = false,
+          gitcommit = false,
+          gitrebase = false,
+        },
+      }
     end,
   },
 }
