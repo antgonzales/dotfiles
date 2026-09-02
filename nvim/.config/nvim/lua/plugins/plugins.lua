@@ -1,5 +1,7 @@
 return {
-  -- Rose Pine colorscheme with transparency support
+  -- Rose Pine, kept installed so `:colorscheme rose-pine-moon` still works
+  -- for comparison while Replica is on trial. Colorscheme selection moved
+  -- to the LazyVim block below.
   {
     "rose-pine/neovim",
     name = "rose-pine",
@@ -8,22 +10,21 @@ return {
       disable_background = true,
       disable_float_background = true,
     },
-    config = function(_, opts)
-      require("rose-pine").setup(opts)
-      
-      -- Automatically detect theme from terminal background
-      if vim.o.background == "dark" then
-        vim.cmd("colorscheme rose-pine-moon")
-      else
-        vim.cmd("colorscheme rose-pine-dawn")
-      end
-    end,
   },
   -- LazyVim configuration
   {
     "LazyVim/LazyVim",
     opts = {
-      -- Let Rose Pine handle colorscheme selection
+      -- Replica ships in colors/ rather than as a plugin, so it only needs
+      -- naming. Transparency keeps Ghostty's background-opacity and blur
+      -- visible, the way Rose Pine was set up; drop it for an opaque
+      -- background painted by the colorscheme itself.
+      colorscheme = function()
+        vim.g.replica_transparent = true
+        vim.cmd.colorscheme(
+          vim.o.background == "light" and "replica-bone" or "replica-carbon"
+        )
+      end,
     },
   },
   -- Telescope configuration

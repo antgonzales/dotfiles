@@ -1,0 +1,32 @@
+# Replica Carbon — dark
+# Reproduction of a terminal after midnight.
+# Generated from replica.json v0.6.0. Do not edit by hand.
+
+background = #1e1b18
+foreground = #d6cfc4
+
+cursor-color = #748b9b
+cursor-text = #1e1b18
+
+selection-background = #312c27
+selection-foreground = #d6cfc4
+
+# normal
+palette = 0=#2c2823
+palette = 1=#d55f5f
+palette = 2=#7c8d61
+palette = 3=#bdac58
+palette = 4=#748b9b
+palette = 5=#a6879b
+palette = 6=#788c7e
+palette = 7=#d6cfc4
+
+# bright
+palette = 8=#9c948a
+palette = 9=#db7575
+palette = 10=#8e9d77
+palette = 11=#c6b86f
+palette = 12=#879ba9
+palette = 13=#b298a9
+palette = 14=#8b9c90
+palette = 15=#dbd5cb

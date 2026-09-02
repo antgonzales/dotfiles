@@ -1,0 +1,32 @@
+# Replica Bone — light
+# Reproduction of paper at noon.
+# Generated from replica.json v0.6.0. Do not edit by hand.
+
+background = #e6e0d5
+foreground = #3d3833
+
+cursor-color = #3d6070
+cursor-text = #e6e0d5
+
+selection-background = #d8d1c5
+selection-foreground = #3d3833
+
+# normal
+palette = 0=#3d3833
+palette = 1=#7c1f1f
+palette = 2=#49601c
+palette = 3=#715d06
+palette = 4=#3d6070
+palette = 5=#755c6b
+palette = 6=#436046
+palette = 7=#eee9e0
+
+# bright
+palette = 8=#6e665b
+palette = 9=#6d1b1b
+palette = 10=#405419
+palette = 11=#635205
+palette = 12=#365463
+palette = 13=#67515e
+palette = 14=#3b543e
+palette = 15=#e6e0d5

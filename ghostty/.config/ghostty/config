@@ -1,8 +1,9 @@
 font-family = Hack Nerd Font Mono
 font-size = 16
-theme = Rose Pine Moon
+theme = replica-carbon
 background-opacity = 0.8
 background-blur-radius = 20
 window-decoration = true
 mouse-hide-while-typing = true
 keybind = shift+enter=text:\x1b\r
+term = xterm-256color
