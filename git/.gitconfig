@@ -17,8 +17,6 @@
     default = current
 [core]
 	editor = nvim
-[http]
-	sslCAInfo = /Users/anthonygonzales/.mdm/certificates/combined-ca-bundle.pem
 [merge]
 	tool = nvimdiff
 [mergetool]

@@ -50,22 +50,17 @@ return {
       },
     },
   },
-  -- Temporary solution until the next Lazyvim release
-  -- https://github.com/LazyVim/LazyVim/issues/5899#issuecomment-2781398031
   {
     "zbirenbaum/copilot.lua",
     optional = true,
-    opts = function()
-      require("copilot.api").status = require("copilot.status")
-      return {
-        filetypes = {
-          markdown = false,
-          txt = false,
-          yaml = false,
-          gitcommit = false,
-          gitrebase = false,
-        },
-      }
-    end,
+    opts = {
+      filetypes = {
+        markdown = false,
+        txt = false,
+        yaml = false,
+        gitcommit = false,
+        gitrebase = false,
+      },
+    },
   },
 }
